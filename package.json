@@ -1,0 +1,18 @@
+{
+  "name": "RedisTimeSeries-Grafana-datasource",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "lodash": "^4.13.1",
+    "package.json": "^2.0.1",
+    "redis": "^2.8.0"
+  }
+}
