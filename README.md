@@ -22,4 +22,6 @@ The app assumes 6379 as the default port. If you do not pass the port number, it
 ### Connecting Grafana to the App
 
 Use SimpleJson data source to connect to your app. See the picture below that shows the configuration
+
 ![Grafana Screenshot](https://raw.githubusercontent.com/redislabsdemo/RedisTimeSeries-Grafana/master/GrafanaScreenshot.png)
+
