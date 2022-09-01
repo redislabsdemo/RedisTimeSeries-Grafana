@@ -23,6 +23,20 @@ var TYPE_TIMESERIES = 'TSDB-TYPE';
 
 app.use(bodyParser.json());
 
+// add options method handler for when setting access=browser in simpleJson
+app.use(function (req, res, next) {
+  // Allow access request from any computers
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE,PATCH');
+  res.header('Access-Control-Allow-Credentials', true);
+  if ('OPTIONS' == req.method) {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+
 function setCORSHeaders(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST");
